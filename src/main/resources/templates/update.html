@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="do_update" method="post">
+    <table>
+        <tr>
+            <td th:text="${user.id}" th:name="id"></td>
+            <td><label><input type="hidden" name="id" th:value="${user.id}"/></label></td>
+        </tr>
+        <tr>
+            <td>用户名</td>
+            <td th:text="${user.username}"></td>
+            <td><label><input type="text" name="username"/></label></td>
+        </tr>
+        <tr>
+            <td>密码</td>
+            <td th:text="${user.password}"></td>
+            <td><label><input type="text" name="password"></label></td>
+        </tr>
+        <tr>
+            <td>电话</td>
+            <td th:text="${user.phone}"></td>
+            <td><label><input type="text" name="phone"></label></td>
+        </tr>
+        <tr>
+            <td>地址</td>
+            <td th:text="${user.address}"></td>
+            <td><label><input type="text" name="address"></label></td>
+        </tr>
+        <tr>
+            <td>类型</td>
+            <td th:text="${user.type}"></td>
+            <td><label><input type="text" name="type"></label></td>
+        </tr>
+        <tr>
+            <td>admin_id</td>
+            <td th:text="${user.admin_id}"></td>
+            <td><label><input type="text" name="admin_id"></label></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="修改"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
